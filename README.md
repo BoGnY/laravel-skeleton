@@ -1,2 +1,2 @@
-# laravel-skeleton
-Laravel app skeleton
+# Laravel app skeleton
+
