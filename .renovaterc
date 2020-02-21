@@ -1,0 +1,21 @@
+{
+    "extends": [
+        "config:base",
+        ":automergeDigest",
+        ":automergeMinor",
+        ":automergeTesters",
+        ":combinePatchMinorReleases",
+        ":disableRateLimiting",
+        ":enableVulnerabilityAlertsWithLabel(vulnerability)",
+        ":gitSignOff",
+        ":ignoreModulesAndTests",
+        ":labels(enhancement,fix)",
+        ":npm",
+        ":pinDependencies",
+        ":pinDevDependencies",
+        ":preserveSemverRanges",
+        ":renovatePrefix",
+        ":semanticCommitType(dep-update)",
+        ":skipStatusChecks"
+    ]
+}
