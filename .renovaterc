@@ -11,8 +11,6 @@
         ":ignoreModulesAndTests",
         ":labels(enhancement,fix)",
         ":npm",
-        ":pinDependencies",
-        ":pinDevDependencies",
         ":preserveSemverRanges",
         ":renovatePrefix",
         ":semanticCommitType(dep-update)",
