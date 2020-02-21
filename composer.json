@@ -1,34 +1,71 @@
 {
     "name": "crypto-technology/laravel-skeleton",
-    "type": "project",
     "description": "Laravel app skeleton.",
     "keywords": [
         "framework",
         "laravel"
     ],
+    "type": "project",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Crypto Technology srl",
+            "email": "admin@cryptotech.srl",
+            "homepage": "https://cryptotech.srl",
+            "role": "Developer"
+        },
+        {
+            "name": "Luca Bognolo",
+            "email": "admin@bogny.eu",
+            "homepage": "https://bogny.eu",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/crypto-technology/laravel-skeleton/issues",
+        "source": "https://github.com/crypto-technology/laravel-skeleton"
+    },
     "require": {
         "php": "^7.2",
+        "ext-bcmath": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-pcre": "*",
+        "ext-pdo": "*",
+        "ext-posix": "*",
+        "ext-redis": "*",
+        "artesaos/seotools": "^0.16",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
-        "laravel/tinker": "^2.0"
+        "laravel/helpers": "^1.1",
+        "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.0",
+        "laravelista/ekko": "^3.2",
+        "spatie/laravel-backup": "^6.7",
+        "spatie/laravel-cookie-consent": "^2.11",
+        "spatie/laravel-cors": "^1.6",
+        "spatie/laravel-csp": "^2.4",
+        "spatie/laravel-robots-middleware": "^1.1",
+        "spatie/laravel-sitemap": "^5.6",
+        "thecodingmachine/safe": "^1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
+        "barryvdh/laravel-ide-helper": "^2.6",
         "facade/ignition": "^1.4",
-        "fzaninotto/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "fzaninotto/faker": "^1.4",
+        "laravel/ui": "^1.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
+        "phpunit/phpunit": "^8.0",
+        "roave/security-advisories": "master@dev",
+        "squizlabs/php_codesniffer": "^3.0",
+        "symplify/easy-coding-standard": "^7.0",
+        "thecodingmachine/phpstan-safe-rule": "^1.0",
+        "thecodingmachine/phpstan-strict-rules": "^0.10"
     },
     "autoload": {
         "psr-4": {
@@ -44,18 +81,78 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
     "scripts": {
+        "post-root-package-install": [
+            "@first-run"
+        ],
+        "post-create-project-cmd": [
+            "@first-run"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
-    }
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "first-run": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('phpcs.xml') || copy('phpcs.xml.dist', 'phpcs.xml');\"",
+            "@php -r \"file_exists('.php_cs') || copy('.php_cs.dist', '.php_cs');\"",
+            "@php artisan key:generate --ansi",
+            "@php artisan storage:link"
+        ],
+        "update-dev": [
+            "@composer update",
+            "@php artisan migrate",
+            "@php artisan db:seed",
+            "@yarn-dev"
+        ],
+        "update-prod": [
+            "@composer install",
+            "@php artisan migrate --force",
+            "@yarn-prod"
+        ],
+        "reset-db": [
+            "@php artisan migrate:fresh --seed"
+        ],
+        "ide-helper": [
+            "@composer dump-autoload",
+            "@php artisan clear-compiled",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:models --write",
+            "@php artisan ide-helper:meta"
+        ],
+        "yarn-dev": [
+            "yarn install",
+            "yarn dev",
+            "@rtlcss-unix"
+        ],
+        "yarn-prod": [
+            "yarn install",
+            "yarn prod",
+            "@rtlcss-unix"
+        ],
+        "test": "@php artisan config:clear && phpunit --configuration phpunit.xml",
+        "php-cs-fixer": "php-cs-fixer fix --verbose --show-progress=dots --diff"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "ext-posix": "1.0",
+            "ext-redis": "1.0"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
