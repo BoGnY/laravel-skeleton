@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
      * Use this setting to enable the cookie consent dialog.
      */

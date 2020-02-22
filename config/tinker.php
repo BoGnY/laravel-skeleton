@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Console Commands
@@ -12,7 +11,6 @@ return [
     | this array you may execute the command in Tinker using its name.
     |
     */
-
     'commands' => [
         // App\Console\Commands\ExampleCommand::class,
     ],
@@ -27,7 +25,6 @@ return [
     | adding the names of each of those classes to the following list.
     |
     */
-
     'alias' => [
         //
     ],
@@ -42,9 +39,7 @@ return [
     | you may accomplish by listing the classes in the following array.
     |
     */
-
     'dont_alias' => [
         'App\Nova',
     ],
-
 ];
