@@ -151,6 +151,15 @@ return [
         /*
          * Package Service Providers...
          */
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Carbon\Laravel\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Laravelista\Ekko\Frameworks\Laravel\ServiceProvider::class,
+        Spatie\Backup\BackupServiceProvider::class,
+        Spatie\CookieConsent\CookieConsentServiceProvider::class,
+        Spatie\Cors\CorsServiceProvider::class,
+        Spatie\Csp\CspServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class,
 
         /*
          * Application Service Providers...
