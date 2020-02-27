@@ -11,5 +11,27 @@ const mix = require('laravel-mix');
  |
  */
 
+// Javascript
+// noinspection JSUnresolvedFunction
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sourceMaps();
+
+// Css
+// noinspection JSUnresolvedFunction
+mix.sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/font.scss', 'public/css')
+    .options({
+        autoprefixer: {
+            options: {
+                browsers: [
+                    'IE >= 8, last 5 versions',
+                ]
+            }
+        }
+    })
+    .sourceMaps();
+
+if (mix.inProduction()) {
+    // noinspection JSUnresolvedFunction
+    mix.version();
+}
