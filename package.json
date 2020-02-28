@@ -17,7 +17,7 @@
         "laravel-mix": "^5.0",
         "lodash": "^4.17",
         "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^3.0.0",
         "rtlcss": "^2.4",
         "sass": "^1.20",
         "sass-loader": "^8.0",
