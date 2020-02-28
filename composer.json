@@ -142,7 +142,10 @@
             "@rtlcss-unix"
         ],
         "test": "@php artisan config:clear && phpunit --configuration phpunit.xml",
-        "php-cs-fixer": "php-cs-fixer fix --verbose --show-progress=dots --diff"
+        "rtlcss-win": "node_modules\\.bin\\rtlcss.cmd -d public/css",
+        "rtlcss-unix": "@php node_modules/.bin/rtlcss -d public/css",
+        "php-cs-fixer-win": "vendor\\bin\\php-cs-fixer.bat fix --verbose --show-progress=dots --diff",
+        "php-cs-fixer-unix": "vendor/bin/php-cs-fixer fix --verbose --show-progress=dots --diff"
     },
     "config": {
         "optimize-autoloader": true,
