@@ -60,7 +60,7 @@
         "laravel/ui": "^1.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^9.0.0",
         "roave/security-advisories": "master@dev",
         "squizlabs/php_codesniffer": "^3.0",
         "symplify/easy-coding-standard": "^7.0",
