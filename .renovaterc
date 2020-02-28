@@ -1,4 +1,5 @@
 {
+    "assignees": ["team:crypto-technology"],
     "baseBranches": ["develop"],
     "extends": [
         "config:base",
@@ -17,5 +18,6 @@
         ":renovatePrefix",
         ":semanticCommitType(dep-update)",
         ":skipStatusChecks"
-    ]
+    ],
+    "reviewers": ["team:crypto-technology"]
 }
