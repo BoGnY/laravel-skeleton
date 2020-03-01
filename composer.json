@@ -88,10 +88,14 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "@first-run"
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('phpcs.xml') || copy('phpcs.xml.dist', 'phpcs.xml');\"",
+            "@php -r \"file_exists('.php_cs') || copy('.php_cs.dist', '.php_cs');\""
         ],
         "post-create-project-cmd": [
-            "@first-run"
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('phpcs.xml') || copy('phpcs.xml.dist', 'phpcs.xml');\"",
+            "@php -r \"file_exists('.php_cs') || copy('.php_cs.dist', '.php_cs');\""
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -104,9 +108,6 @@
             "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ],
         "first-run": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php -r \"file_exists('phpcs.xml') || copy('phpcs.xml.dist', 'phpcs.xml');\"",
-            "@php -r \"file_exists('.php_cs') || copy('.php_cs.dist', '.php_cs');\"",
             "@php artisan key:generate --ansi",
             "@php artisan storage:link"
         ],

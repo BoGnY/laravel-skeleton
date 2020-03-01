@@ -18,6 +18,7 @@ First make storage folder writable.
 
 ```shell script
 composer create-project crypto-technology/laravel-skeleton
+composer first-run
 ```
 
 ### Development environment
