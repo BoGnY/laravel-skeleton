@@ -17,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         if ('production' !== App::environment()) {
             $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            $this->app->register(\TCG\Voyager\Providers\VoyagerDummyServiceProvider::class);
         }
     }
 

@@ -151,15 +151,20 @@ return [
         /*
          * Package Service Providers...
          */
+        Arrilot\Widgets\ServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Carbon\Laravel\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProviderLaravelRecent::class,
+        Larapack\DoctrineSupport\DoctrineSupportServiceProvider::class,
+        Larapack\VoyagerHooks\VoyagerHooksServiceProvider::class,
         Laravelista\Ekko\Frameworks\Laravel\ServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Spatie\CookieConsent\CookieConsentServiceProvider::class,
         Spatie\Cors\CorsServiceProvider::class,
         Spatie\Csp\CspServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
+        TCG\Voyager\VoyagerServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -226,6 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Voyager' => TCG\Voyager\Facades\Voyager::class,
     ],
 
     /*
