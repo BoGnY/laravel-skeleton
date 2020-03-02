@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\DataType;
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\DataType;
 
 class DataTypesTableSeeder extends Seeder
 {

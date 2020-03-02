@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\Permission;
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Permission;
 
 class PermissionsTableSeeder extends Seeder
 {

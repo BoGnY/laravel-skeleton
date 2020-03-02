@@ -1,11 +1,11 @@
 <?php
 
+use App\Models\Category;
+use App\Models\DataType;
+use App\Models\MenuItem;
+use App\Models\Page;
+use App\Models\Translation;
 use Illuminate\Database\Seeder;
-use TCG\Voyager\Models\Category;
-use TCG\Voyager\Models\DataType;
-use TCG\Voyager\Models\MenuItem;
-use TCG\Voyager\Models\Page;
-use TCG\Voyager\Models\Translation;
 
 class TranslationsTableSeeder extends Seeder
 {
