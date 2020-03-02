@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        ini_set('memory_limit', '1G');
+        ini_set('memory_limit', '2G');
 
         $locale = config('app.locale');
         App::setLocale($locale);
