@@ -22,7 +22,7 @@ use TCG\Voyager\Models\User as Model;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property mixed $locale
- * @property-read string $full_name
+ * @property-read string $name
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
  * @property-read \TCG\Voyager\Models\Role|null $role
@@ -86,7 +86,7 @@ class User extends Model implements MustVerifyEmail
      *
      * @return string
      */
-    public function getFullNameAttribute()
+    public function getNameAttribute()
     {
         return "{$this->first_name} {$this->last_name}";
     }
