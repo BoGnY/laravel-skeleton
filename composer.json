@@ -38,7 +38,7 @@
         "ext-redis": "*",
         "artesaos/seotools": "^0.16",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "^6.2",
+        "laravel/framework": "^7.0.0",
         "laravel/helpers": "^1.1",
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.0",
