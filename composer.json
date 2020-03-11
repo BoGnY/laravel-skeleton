@@ -36,7 +36,7 @@
         "ext-pdo": "*",
         "ext-posix": "*",
         "ext-redis": "*",
-        "artesaos/seotools": "^0.16",
+        "artesaos/seotools": "^0.17.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/helpers": "^1.1",
