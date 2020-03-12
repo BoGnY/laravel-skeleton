@@ -1,5 +1,5 @@
 {
-    "assignees": ["team:crypto-technology"],
+    "assignees": ["bogny"],
     "baseBranches": ["develop"],
     "extends": [
         "config:base",
@@ -19,5 +19,5 @@
         ":semanticCommitType(dep-update)",
         ":skipStatusChecks"
     ],
-    "reviewers": ["team:crypto-technology"]
+    "reviewers": ["bogny"]
 }
