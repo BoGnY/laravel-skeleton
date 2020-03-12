@@ -100,6 +100,8 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan clear-compiled",
+            "@php artisan optimize:clear",
             "@php artisan package:discover --ansi"
         ],
         "post-install-cmd": [
