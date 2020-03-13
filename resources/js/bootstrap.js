@@ -5,9 +5,9 @@
  */
 
 window.axios = require('axios');
-window.$ = window.jQuery = require('jquery');
-import 'bootstrap';
-window.Popper = require('popper.js').default;
+//window.$ = window.jQuery = require('jquery');
+//import 'bootstrap';
+//window.Popper = require('popper.js').default;
 window._ = require('lodash');
 // import Echo from 'laravel-echo'
 // window.Pusher = require('pusher-js');

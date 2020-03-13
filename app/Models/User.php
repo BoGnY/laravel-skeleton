@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Creativeorange\Gravatar\Facades\Gravatar;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
@@ -47,6 +49,7 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasRoles;
     use Notifiable;
+    use VerifiesEmails;
 
     /**
      * The attributes that are mass assignable.
@@ -87,5 +90,29 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getNameAttribute()
     {
         return "{$this->first_name} {$this->last_name}";
+    }
+
+    /**
+     * Get the user's AdminLTE image.
+     *
+     * @return string
+     *
+     * @noinspection PhpUnused
+     */
+    public function adminlte_image()
+    {
+        return Gravatar::get($this->email, 'medium');
+    }
+
+    /**
+     * Get the user's AdminLTE desc.
+     *
+     * @return string
+     *
+     * @noinspection PhpUnused
+     */
+    public function adminlte_desc()
+    {
+        return $this->getNameAttribute();
     }
 }
