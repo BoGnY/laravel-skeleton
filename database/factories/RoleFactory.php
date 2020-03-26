@@ -1,10 +1,7 @@
 <?php
 
-use App\Models\User;
+use App\Models\Role;
 use Faker\Generator as Faker;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +15,8 @@ use Illuminate\Support\Str;
 */
 
 /* @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Role::class, function (Faker $faker) {
     return [
-        'first_name' => $faker->firstName,
-        'last_name' => $faker->lastName,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => Carbon::now(),
-        'password' => Hash::make('password'),
-        'remember_token' => Str::random(60),
+        'name' => $faker->slug,
     ];
 });

@@ -3,6 +3,7 @@
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
@@ -22,6 +23,7 @@ class UsersTableSeeder extends Seeder
             'email' => env('ADMIN_EMAIL'),
             'password' => Hash::make(env('ADMIN_PASSWORD')),
             'remember_token' => Str::random(60),
+            'email_verified_at' => Carbon::now(),
         ]);
 
         $user->assignRole($role);
