@@ -105,8 +105,8 @@ return [
         'db' => true, // Show database (PDO) queries and bindings
         'views' => true, // Views with their data
         'route' => true, // Current route information
-        'auth' => true, // Display Laravel authentication status
-        'gate' => true, // Display Laravel Gate checks
+        'auth' => false, // Display Laravel authentication status
+        'gate' => false, // Display Laravel Gate checks
         'session' => true, // Display session data
         'symfony_request' => true, // Only one can be enabled..
         'mail' => true, // Catch mail messages
@@ -115,9 +115,9 @@ return [
         'default_request' => false, // Regular or special Symfony request logger
         'logs' => true, // Add the latest log messages
         'files' => false, // Show the included files
-        'config' => true, // Display config settings
+        'config' => false, // Display config settings
         'cache' => false, // Display cache events
-        'models' => true, // Display models
+        'models' => false, // Display models
     ],
 
     /*
