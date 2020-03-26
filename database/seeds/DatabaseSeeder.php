@@ -15,16 +15,17 @@ class DatabaseSeeder extends Seeder
         Eloquent::unguard();
 
         // Disable foreign key constraints check before running seeders
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Schema::disableForeignKeyConstraints();
+
         $this->call(RolesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
 
         if ('production' !== App::environment()) {
-            //$this->call(VoyagerDummyDatabaseSeeder::class);
+            //$this->call(DevelopmentDatabaseSeeder::class);
         }
 
         // Re-enable foreign key constraints check after running seeders
-        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        Schema::enableForeignKeyConstraints();
 
         Eloquent::reguard();
     }
