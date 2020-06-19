@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9ce9184b98df65bbb167d88ce4a0f9d",
+    "content-hash": "95c7e5b1b070380c7f16e43c4bbcc220",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -47,16 +47,16 @@
         },
         {
             "name": "artesaos/seotools",
-            "version": "v0.17.2",
+            "version": "v0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/artesaos/seotools.git",
-                "reference": "ca27cd0edf917e0bc805227013859b8b5a1f01fb"
+                "reference": "91c9fc3ee18db01d220dd47708f303b8eff8078b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artesaos/seotools/zipball/ca27cd0edf917e0bc805227013859b8b5a1f01fb",
-                "reference": "ca27cd0edf917e0bc805227013859b8b5a1f01fb",
+                "url": "https://api.github.com/repos/artesaos/seotools/zipball/91c9fc3ee18db01d220dd47708f303b8eff8078b",
+                "reference": "91c9fc3ee18db01d220dd47708f303b8eff8078b",
                 "shasum": ""
             },
             "require": {
@@ -79,6 +79,7 @@
                         "SEOMeta": "Artesaos\\SEOTools\\Facades\\SEOMeta",
                         "OpenGraph": "Artesaos\\SEOTools\\Facades\\OpenGraph",
                         "Twitter": "Artesaos\\SEOTools\\Facades\\TwitterCard",
+                        "JsonLd": "Artesaos\\SEOTools\\Facades\\JsonLd",
                         "SEO": "Artesaos\\SEOTools\\Facades\\SEOTools"
                     }
                 }
@@ -109,7 +110,7 @@
                 "seotools",
                 "webmaster"
             ],
-            "time": "2020-04-02T19:53:38+00:00"
+            "time": "2020-06-19T22:31:46+00:00"
         },
         {
             "name": "creativeorange/gravatar",

@@ -36,7 +36,7 @@
         "ext-pdo": "*",
         "ext-posix": "*",
         "ext-redis": "*",
-        "artesaos/seotools": "^0.17",
+        "artesaos/seotools": "^0.18",
         "creativeorange/gravatar": "^1.0",
         "davejamesmiller/laravel-breadcrumbs": "^5.3",
         "fideloper/proxy": "^4.0",
