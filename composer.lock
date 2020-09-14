@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95c7e5b1b070380c7f16e43c4bbcc220",
+    "content-hash": "27256a1e4f54ebe42cb76a73de119149",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -47,22 +47,22 @@
         },
         {
             "name": "artesaos/seotools",
-            "version": "v0.18.0",
+            "version": "v0.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/artesaos/seotools.git",
-                "reference": "91c9fc3ee18db01d220dd47708f303b8eff8078b"
+                "reference": "e1e90fb8f542eb01d16f785a9988915e762f503e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artesaos/seotools/zipball/91c9fc3ee18db01d220dd47708f303b8eff8078b",
-                "reference": "91c9fc3ee18db01d220dd47708f303b8eff8078b",
+                "url": "https://api.github.com/repos/artesaos/seotools/zipball/e1e90fb8f542eb01d16f785a9988915e762f503e",
+                "reference": "e1e90fb8f542eb01d16f785a9988915e762f503e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "illuminate/config": "5.8.* || ^6.0 || ^7.0",
-                "illuminate/support": "5.8.* || ^6.0 || ^7.0",
+                "illuminate/config": "5.8.* || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0",
                 "php": ">=7.1"
             },
             "require-dev": {
@@ -110,7 +110,7 @@
                 "seotools",
                 "webmaster"
             ],
-            "time": "2020-06-19T22:31:46+00:00"
+            "time": "2020-09-14T13:33:11+00:00"
         },
         {
             "name": "creativeorange/gravatar",
@@ -5069,12 +5069,12 @@
             "version": "v6.17.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tightenco/collect.git",
+                "url": "https://github.com/tighten/collect.git",
                 "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
+                "url": "https://api.github.com/repos/tighten/collect/zipball/bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
                 "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
                 "shasum": ""
             },
@@ -8207,6 +8207,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2020-02-07T06:19:00+00:00"
         },
         {
