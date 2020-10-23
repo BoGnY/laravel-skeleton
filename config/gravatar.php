@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'default' => [
         // By default, images are presented at 80px by 80px if no size parameter is supplied.

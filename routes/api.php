@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,6 @@ Route::group([
     'middleware' => 'auth:api',
     'prefix' => 'api/v1',
     'as' => 'api.',
-], function () {
+], function (): void {
     Route::get('user', 'Api\V1\UserController@index')->name('user');
 });

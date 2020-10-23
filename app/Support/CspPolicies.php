@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Support;
 
 use Spatie\Csp\Directive;
@@ -14,7 +16,7 @@ class CspPolicies extends Policy
      * @throws \Spatie\Csp\Exceptions\InvalidDirective
      * @throws \Spatie\Csp\Exceptions\InvalidValueSet
      */
-    public function configure()
+    public function configure(): void
     {
         $cdn = [
             'cdn.jsdelivr.net',
