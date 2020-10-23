@@ -1,7 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -10,10 +15,8 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        Eloquent::unguard();
-
         // Disable foreign key constraints check before running seeders
         Schema::disableForeignKeyConstraints();
 
@@ -26,7 +29,5 @@ class DatabaseSeeder extends Seeder
 
         // Re-enable foreign key constraints check after running seeders
         Schema::enableForeignKeyConstraints();
-
-        Eloquent::reguard();
     }
 }

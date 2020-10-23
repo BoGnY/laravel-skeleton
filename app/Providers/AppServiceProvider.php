@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
@@ -32,5 +33,7 @@ class AppServiceProvider extends ServiceProvider
         $locale = config('app.locale');
         App::setLocale($locale);
         Carbon::setLocale($locale);
+
+        Paginator::useBootstrap();
     }
 }

@@ -35,7 +35,7 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-    'debug' => env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -155,13 +155,13 @@ return [
         Carbon\Laravel\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
-        DaveJamesMiller\Breadcrumbs\BreadcrumbsServiceProvider::class,
+        Diglactic\Breadcrumbs\ServiceProvider::class,
+        Fruitcake\Cors\CorsServiceProvider::class,
         Intervention\Image\ImageServiceProviderLaravelRecent::class,
         JeroenNoten\LaravelAdminLte\AdminLteServiceProvider::class,
         Laravelista\Ekko\Frameworks\Laravel\ServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Spatie\CookieConsent\CookieConsentServiceProvider::class,
-        Spatie\Cors\CorsServiceProvider::class,
         Spatie\Csp\CspServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
@@ -209,6 +209,7 @@ return [
         'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Http' => Illuminate\Support\Facades\Http::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'JsonLd' => Artesaos\SEOTools\Facades\JsonLd::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,

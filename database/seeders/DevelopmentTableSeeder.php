@@ -1,7 +1,9 @@
 <?php
 
-use App\Models\Role;
-use App\Models\User;
+declare(strict_types=1);
+
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
 class DevelopmentTableSeeder extends Seeder
@@ -11,15 +13,15 @@ class DevelopmentTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        factory(User::class, 25)
+        \App\Models\User::factory(25)
             ->create()
-            ->each(function ($user) {
+            ->each(function ($user): void {
                 /** @var \App\Models\User $user */
-                factory(Role::class)
+                \App\Models\Role::factory()
                     ->create()
-                    ->each(function ($role) use ($user) {
+                    ->each(function ($role) use ($user): void {
                         /** @var \App\Models\Role $role */
                         $user->assignRole($role);
                     });

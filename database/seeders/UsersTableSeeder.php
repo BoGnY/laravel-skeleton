@@ -1,9 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Database\Seeders;
+
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
@@ -13,7 +18,7 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $role = Role::where('name', 'admin')->firstOrFail();
 
