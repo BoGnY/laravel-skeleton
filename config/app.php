@@ -160,7 +160,6 @@ return [
         Diglactic\Breadcrumbs\ServiceProvider::class,
         Fruitcake\Cors\CorsServiceProvider::class,
         Intervention\Image\ImageServiceProviderLaravelRecent::class,
-        JeroenNoten\LaravelAdminLte\AdminLteServiceProvider::class,
         Laravelista\Ekko\Frameworks\Laravel\ServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Spatie\CookieConsent\CookieConsentServiceProvider::class,
@@ -175,6 +174,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         //App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ],
 

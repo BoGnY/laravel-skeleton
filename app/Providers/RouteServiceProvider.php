@@ -28,7 +28,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/';
+    public const HOME = '/dashboard';
 
     /**
      * The path to the "admin" route for your application.
@@ -47,7 +47,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function (): void {
-            Route::middleware('api')
+            Route::middleware('auth:sanctum')
                 ->namespace($this->namespace)
                 ->prefix('api/v1')
                 ->name('api.')
@@ -57,11 +57,13 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
 
-            Route::middleware('web')
+            Route::middleware(['web', 'auth:sanctum', 'verified'])
                 ->namespace($this->namespace)
-                ->group(base_path('routes/auth.php'));
+                ->prefix('user')
+                ->name('user.')
+                ->group(base_path('routes/user.php'));
 
-            Route::middleware(['web', 'auth', 'role:admin'])
+            Route::middleware(['web', 'auth:sanctum', 'role:admin', 'verified'])
                 ->namespace($this->namespace)
                 ->prefix('admin')
                 ->name('admin.')

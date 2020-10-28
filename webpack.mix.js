@@ -1,4 +1,8 @@
 const mix = require('laravel-mix');
+const fs = require('fs');
+const path = require('path');
+
+require("laravel-mix-tailwind");
 
 /*
  |--------------------------------------------------------------------------
@@ -14,12 +18,12 @@ const mix = require('laravel-mix');
 // Javascript
 // noinspection JSUnresolvedFunction
 mix.js('resources/js/app.js', 'public/js')
-    .sourceMaps();
+    .sourceMaps(false);
 
 // Css
 // noinspection JSUnresolvedFunction
 mix.sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/font.scss', 'public/css')
+    //.sass('resources/sass/font.scss', 'public/css')
     .options({
         autoprefixer: {
             options: {
@@ -29,9 +33,31 @@ mix.sass('resources/sass/app.scss', 'public/css')
             }
         }
     })
-    .sourceMaps();
+    .webpackConfig(require('./webpack.config'))
+    .tailwind('./tailwind.config.js')
+    .sourceMaps(false);
 
 if (mix.inProduction()) {
+    const dirs = ['public/js', 'public/css'];
+    dirs.forEach(dir => {
+        fs.readdirSync(dir).forEach(item => {
+            // get current file name
+            const name = path.parse(item).name;
+            // get current file extension
+            const ext = path.parse(item).ext;
+            // get current file path
+            const filepath = path.resolve(dir, item);
+            // get information about the file
+            const item_info = fs.statSync(filepath);
+
+            // exclude folders
+            if (item_info.isFile() && ! name.includes('.min') && ('.js' === ext || '.css' === ext)) {
+                // noinspection JSUnresolvedFunction
+                mix.minify(filepath);
+            }
+        })
+    });
+
     // noinspection JSUnresolvedFunction
     mix.version();
 }
