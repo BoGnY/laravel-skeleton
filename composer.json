@@ -1,5 +1,5 @@
 {
-    "name": "crypto-technology/laravel-skeleton",
+    "name": "bogny/laravel-skeleton",
     "description": "Laravel app skeleton.",
     "keywords": [
         "framework",
@@ -9,12 +9,6 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Crypto Technology srl",
-            "email": "admin@cryptotech.srl",
-            "homepage": "https://cryptotech.srl",
-            "role": "Developer"
-        },
-        {
             "name": "Luca Bognolo",
             "email": "admin@bogny.eu",
             "homepage": "https://bogny.eu",
@@ -22,8 +16,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/crypto-technology/laravel-skeleton/issues",
-        "source": "https://github.com/crypto-technology/laravel-skeleton"
+        "issues": "https://github.com/bogny/laravel-skeleton/issues",
+        "source": "https://github.com/bogny/laravel-skeleton"
     },
     "require": {
         "php": "^7.3",
