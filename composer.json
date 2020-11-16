@@ -176,6 +176,10 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "provide": {
+        "ext-posix": "1.0",
+        "ext-redis": "1.0"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
