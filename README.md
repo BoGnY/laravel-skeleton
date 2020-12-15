@@ -17,7 +17,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 First make storage folder writable. 
 
 ```shell script
-composer create-project crypto-technology/laravel-skeleton
+composer create-project bogny/laravel-skeleton
 composer first-run
 ```
 
