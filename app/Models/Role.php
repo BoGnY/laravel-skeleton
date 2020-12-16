@@ -22,7 +22,7 @@ use Spatie\Permission\Models\Role as Model;
  *
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Role permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Role whereGuardName($value)

@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $role = Role::where('name', 'admin')->firstOrFail();
+        $role = Role::where('name', config('core.admin_role'))->firstOrFail();
 
         $user = User::create([
             'first_name' => env('ADMIN_FIRST_NAME'),
