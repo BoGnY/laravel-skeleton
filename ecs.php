@@ -43,7 +43,7 @@ return static function (ContainerConfigurator $container_configurator): void {
 
     $parameters->set(Option::SKIP, [
         // skip rule completely
-        PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer::class => null,
+        PhpCsFixer\Fixer\Operator\ConcatSpaceFixer::class => null,
         PhpCsFixer\Fixer\Phpdoc\PhpdocNoAliasTagFixer::class => null,
         PhpCsFixer\Fixer\Phpdoc\PhpdocToCommentFixer::class => null,
         PhpCsFixer\Fixer\Whitespace\NoSpacesInsideParenthesisFixer::class => null,
@@ -61,9 +61,15 @@ return static function (ContainerConfigurator $container_configurator): void {
     $services = $container_configurator->services();
     $services->set(Symplify\CodingStandard\Fixer\Commenting\ParamReturnAndVarTagMalformsFixer::class);
     $services->set(Symplify\CodingStandard\Fixer\Spacing\RemoveSpacingAroundModifierAndConstFixer::class);
+    $services->set(PhpCsFixer\Fixer\Import\OrderedImportsFixer::class)
+        ->call('configure', [[
+            'sort_algorithm' => 'alpha',
+        ]]);
     $services->set(PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer::class);
     $services->set(PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer::class)
         ->call('configure', [[
             'align' => 'left',
         ]]);
+    $services->set(PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer::class);
+    $services->set(PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer::class);
 };

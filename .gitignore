@@ -280,7 +280,6 @@ $RECYCLE.BIN/
 
 ### Project related ###
 
-*/**/.php_cs.cache
 */**/.ecs_cache
 */**/.phpunit.result.cache
 .php_cs
