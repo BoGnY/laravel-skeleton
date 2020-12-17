@@ -206,9 +206,7 @@ Procfile     eol=lf
 *.pyc  binary
 
 ## PROJECTS
-.env.example    eol=lf export-ignore
-.env.testing    eol=lf export-ignore
-.env.travis     eol=lf export-ignore
-.php_cs.dist    eol=lf diff=php export-ignore
-phpcs.xml.dist  eol=lf linguist-language=XML export-ignore
-phpunit.xml     eol=lf linguist-language=XML export-ignore
+.env.example  eol=lf export-ignore
+.env.testing  eol=lf export-ignore
+.env.travis   eol=lf export-ignore
+phpunit.xml   eol=lf linguist-language=XML export-ignore

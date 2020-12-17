@@ -121,16 +121,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return "{$this->last_name} {$this->first_name}";
     }
-
-    /**
-     * Get the user's AdminLTE image.
-     *
-     * @return string
-     *
-     * @noinspection PhpUnused
-     */
-    public function adminlte_image()
-    {
-        return Gravatar::get($this->email, 'medium');
-    }
 }
