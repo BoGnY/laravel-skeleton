@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Support\Responsable;
+use Inertia\Inertia;
 
 class IndexController extends Controller
 {
@@ -21,11 +23,9 @@ class IndexController extends Controller
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(): Responsable
     {
-        return view('admin.index');
+        return Inertia::render('Admin/Index');
     }
 }

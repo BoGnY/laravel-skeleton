@@ -15,7 +15,7 @@ return [
     | during installation and will not need to be changed after that.
     |
     */
-    'stack' => 'livewire',
+    'stack' => 'inertia',
 
     /*
     |--------------------------------------------------------------------------

@@ -25,12 +25,26 @@ mix.js('resources/js/app.js', 'public/js')
 mix.sass('resources/sass/app.scss', 'public/css')
     //.sass('resources/sass/font.scss', 'public/css')
     .options({
-        autoprefixer: {
-            options: {
-                browsers: [
-                    'IE >= 8, last 5 versions',
-                ]
-            }
+        //processCssUrls: false,
+        postCss: [
+            require('postcss-single-charset')({ /* options */ }),
+            //tailwindcss('./tailwind.config.js')
+        ],
+        terser: {
+            terserOptions: {
+                format: {
+                    comments: false,
+                },
+            },
+            parallel: 4,
+            extractComments: false,
+        },
+        cssNano: {
+            preset: ['default', {
+                discardComments: {
+                    removeAll: true
+                },
+            }]
         }
     })
     .webpackConfig(require('./webpack.config'))

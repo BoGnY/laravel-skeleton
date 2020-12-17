@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Support\Responsable;
+use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
@@ -20,11 +22,9 @@ class DashboardController extends Controller
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(): Responsable
     {
-        return view('user.dashboard');
+        return Inertia::render('User/Dashboard');
     }
 }

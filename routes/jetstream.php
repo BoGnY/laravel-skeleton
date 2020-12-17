@@ -9,8 +9,12 @@ use Laravel\Jetstream\Http\Controllers\Livewire\TeamController;
 use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 use Laravel\Jetstream\Jetstream;
 
-Route::group(['middleware' => config('jetstream.middleware', ['web'])], function (): void {
-    Route::group(['middleware' => ['auth:sanctum', 'verified']], function (): void {
+Route::group([
+    'middleware' => config('jetstream.middleware', ['web']),
+], function (): void {
+    Route::group([
+        'middleware' => ['auth:sanctum', 'verified'],
+    ], function (): void {
         // User & Profile...
         Route::get('/user/profile', [UserProfileController::class, 'show'])->name('profile.show');
 

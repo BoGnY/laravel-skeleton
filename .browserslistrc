@@ -1,0 +1,11 @@
+# Browsers that we support
+
+[development]
+# 'defaults' is '> 0.5%, last 2 versions, Firefox ESR, not dead'
+defaults
+
+[production]
+> 1%
+last 2 versions
+Firefox ESR
+not dead
