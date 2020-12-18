@@ -40,6 +40,18 @@ input:invalid, textarea:invalid, select:invalid {
  */
 @import '~tailwindcss/utilities';
 
+// Keep support for the -webkit-overflow-scrolling property on iOS < 13
+@layer utilities {
+    @responsive {
+        .scrolling-touch {
+            -webkit-overflow-scrolling: touch;
+        }
+        .scrolling-auto {
+            -webkit-overflow-scrolling: auto;
+        }
+    }
+}
+
 /**
  * Here you would add any custom utilities you need that don't come out of the
  * box with Tailwind.
